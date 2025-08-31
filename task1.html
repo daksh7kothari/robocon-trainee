@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOCON - 1</title>
+</head>
+<body>
+    <select name="colors" id="color">
+        <option value="red" id="red">red</option>
+        <option value="yellow" id="red">yellow</option>
+        <option value="green" id="red">green</option>
+        <option value="blue" id="red">blue</option>
+        <option value="white" id="red">white</option>
+        <option value="black" id="red">black</option>
+        <option value="random" id="random">random</option>
+    </select>
+    <button type="submit" onclick="changecolor()">submit</button>
+    <input type="text" placeholder="Enter Values with Comma Seperation..." id="textInput">
+    <button type="submit" onclick="textSubmit()">submit</button>
+    <button type="submit" onclick="refresh()">refresh</button>
+    <ul id="list">
+    </ul>
+
+
+     <script>
+        function changecolor(){
+            let bg = document.getElementById("color").value;
+            if (bg === "random") {
+                bg = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            }
+            document.body.style.backgroundColor = bg;
+        }
+        function textSubmit() {
+            let message = document.getElementById("textInput").value;
+            let text = message.split(',');
+
+
+            // Show values as list items
+            let ul = document.getElementById("list");
+            //ul.innerHTML = ""; // clear old list
+            text.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = item.trim(); // remove extra spaces
+                ul.appendChild(li);
+            });
+        
+        }
+        function refresh() {
+            // Show values as list items
+            let ul = document.getElementById("list");
+            ul.innerHTML = ""; // clear old list
+        }
+    </script>
+</body>
+</html>
