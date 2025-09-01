@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator task 2</title>
+</head>
+<body>
+    <div id="calculator" >
+        <input id="displayValue" type="text">
+        <div id="keys">
+           
+            <button onclick="valueDisplay('1')">1</button>
+            <button onclick="valueDisplay('2')">2</button>
+            <button onclick="valueDisplay('3')">3</button>
+            
+            <button onclick="valueDisplay('4')">4</button>
+            <button onclick="valueDisplay('5')">5</button>
+            <button onclick="valueDisplay('6')">6</button>
+            <button onclick="valueDisplay('*')">*</button>
+            <button onclick="valueDisplay('7')">7</button>
+            <button onclick="valueDisplay('8')">8</button>
+            <button onclick="valueDisplay('9')">9</button>
+            
+        </div>
+        <div class="operators">
+             <button onclick="valueDisplay('+')">+</button>
+             <button onclick="valueDisplay('-')">-</button>
+             <button onclick="calculate('=')">=</button>
+            <button onclick="clearscreen()">c</button>
+            <button onclick="valueDisplay('/')">/</button>
+            <button onclick="valueDisplay('.')">.</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById("displayValue");
+        function valueDisplay(input) {
+            display.value += input;
+        }
+        function calculate(){
+            display.value = eval(display.value)
+        }
+        function clearscreen(){
+            display.value = "";
+        }
+    </script>
+</body>
+</html>
