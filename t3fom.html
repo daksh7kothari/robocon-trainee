@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        #preview{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="edit">
+        <h3>Enter Your Details</h3>
+        <p>Name</p>
+        <input type="text" value="daksh" id="name">
+        <p>Title/Role</p>
+        <input type="text" value="daksh" id="title">
+        <p>Bio</p>
+        <textarea type="text" value="don" id="bio"></textarea>
+        <p><button onclick="onPreview()">Preview</button>
+    </section>
+    <section id="preview">
+        <h3>Profile Preview</h3>
+        <div>
+            <h2 id="displayname"></h2>
+            <p id="displayrole"></p>
+            <p id="displaypreview"></p>
+            <p><button onclick="onEdit()">Edit</button>
+        </div>
+    </section>
+    <a href="task3.html">Home page</a>
+    <script>
+        function onPreview(){
+            let name = document.getElementById("name").value;
+            let title = document.getElementById("title").value;
+            let bio = document.getElementById("bio").value;
+
+            document.getElementById("displayname").innerText = name;
+            document.getElementById("displayrole").innerText =  title;
+            document.getElementById("displaypreview").innerText = bio;
+
+            if((name=="") || (title=="") || (bio=="")){
+                window.alert("Kindly enter all values")
+            }
+            else{
+                document.getElementById("preview").style.display = "block";
+                document.getElementById("edit").style.display = "none";
+            }
+                
+    }
+
+        function onEdit() {
+            document.getElementById("preview").style.display = "none";
+            document.getElementById("edit").style.display = "block";
+    }
+    </script>
+</body>
+</html>
