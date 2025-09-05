@@ -12,17 +12,17 @@
     </style>
 </head>
 <body>
-    <section id="edit">
+    <section id="edit" class="edit">
         <h3>Enter Your Details</h3>
         <p>Name</p>
         <input type="text" value="daksh" id="name">
         <p>Title/Role</p>
-        <input type="text" value="daksh" id="title">
+        <input type="text" value="ai" id="title">
         <p>Bio</p>
-        <textarea type="text" value="don" id="bio"></textarea>
+        <textarea type="text"  id="bio"  style=" max-width:100%; min-height:50px; height:100%; width:100%;">im skibidi</textarea>
         <p><button class="btn" onclick="onPreview()">Preview</button>
     </section>
-    <section id="preview">
+    <section id="preview" class="preview head para">
         <h3>Profile Preview</h3>
         <div>
             <h2 id="displayname"></h2>
@@ -31,7 +31,7 @@
             <button class="btn" onclick="onEdit()">Edit</button>
         </div>
     </section>
-    <a href="task3.html">Home page</a>
+    <a href="task3.html" class="btn">Home page</a>
     <script>
         function onPreview(){
             let name = document.getElementById("name").value;

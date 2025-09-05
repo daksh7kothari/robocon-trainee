@@ -1,53 +1,173 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-}
-body{
-    padding-top: 5rem;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-:root{
-    --primary-color: #fff;
-    --secondary-color: #e0aaff;
-    --background-color: #10002b;
-    --text-color: #c77dff;
-}
-section{
-    padding-top: 5rem;
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.head h1{
-    color: var(--primary-color);
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+/* ===== Theme Colors ===== */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #e0aaff;
+  --background-color: #10002b;
+  --section-bg: #240046;
+  --text-color: #c77dff;
+  --hover-color: #b185db;
 }
-.shead h3{
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+
+/* ===== Body ===== */
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 5rem;
+  line-height: 1.6;
+  text-align: center;
 }
-.para p{
-    color: var(--text-color);
+
+/* ===== Sections ===== */
+section {
+  background-color: var(--section-bg);
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
 }
-.shead h4{
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
+
+/* ===== Headings ===== */
+.head h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
-.btn{
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
+
+.shead h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shead h4 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* ===== Paragraphs ===== */
+.para p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* ===== Developer Cards (Example for Robocon Section) ===== */
+.devs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.devs div {
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.devs div:hover {
+  transform: translateY(-5px);
+}
+
+.devs img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid var(--secondary-color);
+}
+
+.devs h4 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* ===== Links & Icons ===== */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.edit,.preview{
+    width: 30%;
+    margin: auto;
+    text-align: left;
+    gap: 10px;
+}
+.edit input{
+    width: 100%;
+}
+/* ===== Footer ===== */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    width: 95%;
+    padding-top: 2rem;
+  }
+
+  .head h1 {
+    font-size: 2.2rem;
+  }
+
+  .shead h3 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 25px;
+  }
 }
