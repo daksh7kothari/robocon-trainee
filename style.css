@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+body{
+    padding-top: 5rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+:root{
+    --primary-color: #fff;
+    --secondary-color: #e0aaff;
+    --background-color: #10002b;
+    --text-color: #c77dff;
+}
+section{
+    padding-top: 5rem;
+}
+
+.head h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.shead h3{
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.para p{
+    color: var(--text-color);
+}
+.shead h4{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.devs img{
+    wi
+}
